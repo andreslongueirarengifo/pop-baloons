@@ -26,7 +26,7 @@ const render = () => {
         if(color==null){
             noneShadow = "box-shadow: none !important;"
         }
-        return `<div class="balloon active" style="background-color:${color} ; ${noneShadow}" id="${position}"  onclick="popBalloon(this.id)"></div>`;
+        return `<div class="balloon active" style="background-color:${color} ; ${noneShadow}" id="${position}"  onclick="popBalloon(id)"></div>`;
     });
 
     document.querySelector("#balloon-count").innerHTML = ballonsMap.filter(b => b !== null).length; // <-- render the balloon count into the DOM
